@@ -19,7 +19,6 @@ pos = START_POS
 vel = START_VEL
 accel = START_ACCEL
 
-timeData = []
 xData = []
 yData = []
 
@@ -29,7 +28,6 @@ while time < TIME_START + TIME_DURATION:
 
     if reportCounter == REPORT_INTERVAL:
         reportCounter = 0
-        timeData.append(time)
         xData.append(pos.x)
         yData.append(pos.y)
 
