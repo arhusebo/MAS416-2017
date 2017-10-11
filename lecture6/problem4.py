@@ -5,11 +5,8 @@ from numpy.linalg import inv
 dpath = "data/data.dat"
 dcols = ['time', 'theta', 'thetadot', 'thetadotdot']
 
-J = 2
-phi_0 = 0
-M_t = 0
-
 data = pandas.read_csv(dpath, header=None, delim_whitespace=True, names=dcols)
+J = 2
 
 X = matrix([data['theta'].as_matrix(), data['thetadot'].as_matrix()]).T
 Y = -J*data['thetadotdot'].as_matrix()
